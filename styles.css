@@ -1,0 +1,35 @@
+/* Vars */
+:root {
+    --flex-full-size: 0 0 100%; /* flex-grow, flex-shrink, flex-basis */
+}
+
+/*Main container*/
+#memory-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#memory-container > h2 {
+    color: darkcyan;
+    flex: var(--flex-full-size);
+    font-size: 10vmin;
+    text-align: center;
+}
+
+/*Each line contains 4 items*/
+#memory-container > #card-row {
+    display: flex;
+}
+
+/*Div that contains each image*/
+#memory-container > #card-row > .card {
+    border: 2px dotted darkred;
+    flex: 1 1 0; /* same size for all items */
+    margin: 1vmin 1vmin;
+}
+
+/*Question mark image, cow image...*/
+#memory-container > #card-row > .card > .card-image {
+    height: auto;
+    width: 100%;
+}
